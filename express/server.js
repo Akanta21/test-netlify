@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 const data = require('./some.js')
 
 const router = express.Router();
-router.get('/', (req, res) => res.json(data))
+router.get('/', (req, res) => res.json(JSON.stringify(data)))
 router.get('/another', (req, res) => res.json({ route: req.originalUrl }));
 router.post('/', (req, res) => res.json({ postBody: req.body }));
 
